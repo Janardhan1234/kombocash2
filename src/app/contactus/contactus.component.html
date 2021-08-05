@@ -1,0 +1,226 @@
+<!--[if lt IE 9]>
+               <div class="bg-danger text-center">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/" class="highlight">upgrade your browser</a> to improve your experience.</div>
+               <![endif]-->
+               <div class="preloader">
+                <div class="preloader_image"></div>
+             </div>
+             <div class="col-sm-12 sign_in text-center margin-top-0" id="sign_in">
+                 <div class="col-sm-4 form-group padding-bottom-20 sign-in-form font-20 background-white" id="sign-in-form">
+                <div class="col-sm-12 cross text-right cursor-pointer margin-top-0 padding-right-38" id="cut">
+                <i class="fas fa-times text-right"></i>
+                </div>
+
+                <img class="width-60" src="images\horizontal2.png" alt="">
+               <h3 class="margin-top-0">Welcome !</h3>
+               <form action="dashboard.html">
+                <input class="form-control sign-in-field border-color-black" type="email" name="username" placeholder="E-mail/Username" required />  <br>
+                <input class="form-control sign-in-field border-color-black" type="password" name="password" placeholder="Password" id="pass" required />
+                <span toggle="#pass" class="fa fa-fw fa-eye field-icon toggle-password color-black font-size-18 margin-right-5"></span>
+                <div class="col-sm-12 text-right padding-top-6 padding-right-0 padding-top-0 font-14" id="forgot-password-button"><a class="forgot" href="#">Forgot Password ?</a></div>
+                 <a href="dashboard.html"><button class="theme_button color1 wide_button padding10-30" id="signin_button">Sign in</button></a>
+              </form>
+             </div>
+             <div class="col-sm-4 form-group forgot-password padding-bottom-20 sign-in-form padding-top-0 font-20 background-white" id="forgot-password-email">
+                <div class="col-sm-12 cross text-right cursor-pointer margin-top-0 padding-right-38" id="cut">
+                <i class="fas fa-times text-right"></i>
+                </div>
+               <h3 class="">Forgot Password</h3>
+               <h6>Please enter your registered Email ID</h6>
+               
+                <input class="form-control sign-in-field border-color-black" type="email" name="username" placeholder="E-mail" required />  <br>
+                 <a><button class="theme_button color1 wide_button padding10-30" id="forgot-password-email-button">Submit</button></a>
+              
+             </div>
+             <div class="col-sm-4 form-group forgot-password padding-bottom-20 sign-in-form padding-top-0 font-20 background-white" id="forgot-password">
+                <div class="col-sm-12 cross text-right cursor-pointer margin-top-0 padding-right-38" id="cut">
+                <i class="fas fa-times text-right"></i>
+                </div>
+               <h3 class="">Forgot Password</h3>
+               <h6>Please enter the OTP sent to your Email Id</h6>
+               
+                <input class="form-control sign-in-field" type="number" name="otp" placeholder="OTP" required /> 
+                <div class="col-sm-12 text-right padding-top-6 padding-right-0 padding-top-0 font-14" id="forgot-password-button"><a class="forgot" href="#">Resend OTP</a></div>
+                 <a href="change-password.html"><button class="theme_button color1 wide_button padding10-30" id="signin_button">Submit</button></a>
+            
+             </div>
+
+            
+          </div>      
+     
+             <!-- search modal -->
+             <div class="modal" tabindex="-1" role="dialog" aria-labelledby="search_modal" id="search_modal">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">
+                <i class="rt-icon2-cross2"></i>
+                </span>
+                </button>
+                <div class="widget widget_search">
+                   <form method="get" class="searchform search-form form-inline" action="./">
+                      <div class="form-group bottommargin_0">
+                         <input type="text" value="" name="search" class="form-control" placeholder="Search keyword" id="modal-search-input">
+                      </div>
+                      <button type="submit" class="theme_button">Search</button>
+                   </form>
+                </div>
+             </div>
+             <!-- Unyson messages modal -->
+             <div class="modal fade" tabindex="-1" role="dialog" id="messages_modal">
+                <div class="fw-messages-wrap ls with_padding">
+                </div>
+             </div>
+  <div id="canvas">
+      <div id="box_wrapper">
+
+          <!-- template sections -->
+
+          <app-header></app-header>
+
+          <!-- <section class="page_breadcrumbs ds color parallax section_padding_top_75 section_padding_bottom_75">
+              <div class="container">
+                  <div class="row">
+                      <div class="col-sm-12 text-center">
+                          <h2 class="text-uppercase">Contact Us</h2>
+                      </div>
+                  </div>
+              </div>
+          </section> -->
+
+          
+
+          <section class="ls columns_padding_25 section_padding_bottom_100">
+              <div class="container">
+                  <div class="row">
+                      <h1 class="text-center color-black">Contact Form</h1>
+                  </div>
+                  <div class="row">
+
+                      <div class="col-md-8" data-animation="scaleAppear">
+
+                          <form class="contact-form columns_padding_5" method="post" action="./">
+
+
+                              <div class="col-sm-6">
+                                  <div class="form-group ">
+                                      <label for="name">Full Name
+                                          <span class="required">*</span>
+                                      </label>
+                                      <i class="fa fa-user highlight2 color-pink" aria-hidden="true"></i>
+                                      <input type="text" aria-required="true" size="30" value="" name="name" id="name" class="form-control contact-form-2" placeholder="Full Name">
+                                  </div>
+                              </div>
+                              <div class="col-sm-6">
+                                  <div class="form-group">
+                                      <label for="phone">Phone Number
+                                          <span class="required">*</span>
+                                      </label>
+                                      <i class="fa fa-phone highlight2 color-pink" aria-hidden="true"></i>
+                                      <input type="text" aria-required="true" size="30" value="" name="phone" id="phone" class="form-control contact-form-2" placeholder="Phone Number">
+                                  </div>
+                              </div>
+                              <div class="col-sm-6">
+                                  <div class="form-group">
+                                      <label for="email">Email address
+                                          <span class="required">*</span>
+                                      </label>
+                                      <i class="fa fa-envelope highlight2 color-pink" aria-hidden="true"></i>
+                                      <input type="email" aria-required="true" size="30" value="" name="email" id="email" class="form-control contact-form-2" placeholder="Email Address">
+                                  </div>
+                              </div>
+                              <div class="col-sm-6">
+                                  <div class="form-group">
+                                      <label for="subject">Subject
+                                          <span class="required">*</span>
+                                      </label>
+                                      <i class="fa fa-flag highlight2 color-pink" aria-hidden="true"></i>
+                                      <!-- <select type="text" aria-required="true" size="30" value="" name="subject" id="subject" class="form-control contact-form-2" placeholder="Subject">
+                                          <option value="1">Loan Query</option>
+                                          <option value="2">Installment Query</option>
+                                          <option value="3">Updation Query</option>
+                                          <option value="4">Account Query</option>
+                                          <option value="5">Join us</option>
+                                      </select> -->
+                                      <select id="state" name="state" class="form-control contact-form-2">
+                                                             <option value="" disabled="" selected="" data-default="" class="font-style-normal">Subject</option>
+                                                             <option value="1">Loan Query</option>
+                                          <option value="2">Installment Query</option>
+                                          <option value="3">Updation Query</option>
+                                          <option value="4">Account Query</option>
+                                          <option value="5">Join us</option>
+                                                          </select>
+                                                          <!-- <i class="fa fa-angle-down theme_button" aria-hidden="true"></i> -->
+                                  </div>
+                              </div>
+                              <div class="col-sm-12">
+
+                                  <div class="contact-form-message form-group">
+                                      <label for="message">Message</label>
+                                      <i class="fa fa-comment highlight2 color-pink" aria-hidden="true"></i>
+                                      <textarea aria-required="true" rows="3" cols="45" name="message" id="message" class="form-control contact-form-2" placeholder="Message"></textarea>
+                                  </div>
+                              </div>
+
+                              <div class="col-sm-12 bottommargin_0">
+
+                                  <div class="contact-form-submit topmargin_10">
+                                      <button type="submit" id="sign-in-button" name="loan_submit" class="theme_button color1 wide_button padding10-30">Send message</button>
+                                  </div>
+                              </div>
+
+
+                          </form>
+                      </div>
+
+                      <div class="col-md-4" data-animation="scaleAppear">
+
+                          <ul class="list1 no-bullets no-top-border no-bottom-border">
+
+                              <li>
+                                  <div class="media">
+                                      <div class="media-left">
+                                          <i class="rt-icon2-shop highlight2 fontsize_18 color-pink"></i>
+                                      </div>
+                                      <div class="media-body">
+                                          <h5 class="media-heading grey">Postal Address:</h5>
+                                          PO Box 97845 Some str. 567, Los Angeles, California, United States
+                                      </div>
+                                  </div>
+                              </li>
+                              <li>
+                                  <div class="media">
+                                      <div class="media-left">
+                                          <i class="rt-icon2-phone5 highlight2 fontsize_18 color-pink"></i>
+                                      </div>
+                                      <div class="media-body">
+                                          <h5 class="media-heading grey">Phone:</h5>
+                                          8(800) 123-12345
+                                      </div>
+                                  </div>
+                              </li>
+                              <li>
+                                  <div class="media">
+                                      <div class="media-left">
+                                          <i class="rt-icon2-mail highlight2 fontsize_18 color-pink"></i>
+                                      </div>
+                                      <div class="media-body greylinks">
+                                          <h5 class="media-heading grey">Email:</h5>
+                                          <a href="mailto:your@mail.com">komboCash@example.com</a>
+                                      </div>
+                                  </div>
+                              </li>
+                          </ul>
+
+                      </div>
+
+                  </div>
+              </div>
+          </section>
+
+
+          <app-footer></app-footer>
+
+      </div>
+      <!-- eof #box_wrapper -->
+  </div>
+  <!-- eof #canvas -->
+
+     

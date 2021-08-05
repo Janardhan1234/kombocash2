@@ -1,0 +1,175 @@
+
+<div>
+<!--[if lt IE 9]>
+               <div class="bg-danger text-center">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/" class="highlight">upgrade your browser</a> to improve your experience.</div>
+               <![endif]-->
+               <div class="preloader">
+                <div class="preloader_image"></div>
+             </div>
+             <div class="col-sm-12 sign_in text-center margin-top-0" id="sign_in">
+            
+
+             <div class="col-sm-4 form-group padding-bottom-20 sign-in-form font-20 background-white" id="sign-in-form">
+                <div class="col-sm-12 cross text-right cursor-pointer margin-top-0 padding-right-38" id="cut">
+                <i class="fas fa-times text-right"></i>
+                </div>
+
+                <img class="width-60" src="images\horizontal2.png" alt="">
+               <h3 class="margin-top-0">Welcome !</h3>
+               <form action="dashboard.html">
+                <input class="form-control sign-in-field border-color-black" type="email" name="username" placeholder="E-mail/Username" required />  <br>
+                <input class="form-control sign-in-field border-color-black" type="password" name="password" placeholder="Password" id="pass" required />
+                <span toggle="#pass" class="fa fa-fw fa-eye field-icon toggle-password color-black font-size-18 margin-right-5"></span>
+                <div class="col-sm-12 text-right padding-top-6 padding-right-0 padding-top-0 font-14" id="forgot-password-button"><a class="forgot" href="#">Forgot Password ?</a></div>
+                 <a href="dashboard.html"><button class="theme_button color1 wide_button padding10-30" id="signin_button">Sign in</button></a>
+              </form>
+             </div>
+             <div class="col-sm-4 form-group forgot-password padding-bottom-20 sign-in-form padding-top-0 font-20 background-white" id="forgot-password-email">
+                <div class="col-sm-12 cross text-right cursor-pointer margin-top-0 padding-right-38" id="cut">
+                <i class="fas fa-times text-right"></i>
+                </div>
+               <h3 class="">Forgot Password</h3>
+               <h6>Please enter your registered Email ID</h6>
+               
+                <input class="form-control sign-in-field border-color-black" type="email" name="username" placeholder="E-mail" required />  <br>
+                 <a><button class="theme_button color1 wide_button padding10-30" id="forgot-password-email-button">Submit</button></a>
+              
+             </div>
+             <div class="col-sm-4 form-group forgot-password padding-bottom-20 sign-in-form padding-top-0 font-20 background-white" id="forgot-password">
+                <div class="col-sm-12 cross text-right cursor-pointer margin-top-0 padding-right-38" id="cut">
+                <i class="fas fa-times text-right"></i>
+                </div>
+               <h3 class="">Forgot Password</h3>
+               <h6>Please enter the OTP sent to your Email Id</h6>
+               
+                <input class="form-control sign-in-field" type="number" name="otp" placeholder="OTP" required /> 
+                <div class="col-sm-12 text-right padding-top-6 padding-right-0 padding-top-0 font-14" id="forgot-password-button"><a class="forgot" href="#">Resend OTP</a></div>
+                 <a href="change-password.html"><button class="theme_button color1 wide_button padding10-30" id="signin_button">Submit</button></a>
+            
+             </div>
+          </div>      
+           
+             <!-- search modal -->
+             <div class="modal" tabindex="-1" role="dialog" aria-labelledby="search_modal" id="search_modal">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">
+                <i class="rt-icon2-cross2"></i>
+                </span>
+                </button>
+                <div class="widget widget_search">
+                   <form method="get" class="searchform search-form form-inline" action="./">
+                      <div class="form-group bottommargin_0">
+                         <input type="text" value="" name="search" class="form-control" placeholder="Search keyword" id="modal-search-input">
+                      </div>
+                      <button type="submit" class="theme_button">Search</button>
+                   </form>
+                </div>
+             </div>
+             <!-- Unyson messages modal -->
+             <div class="modal fade" tabindex="-1" role="dialog" id="messages_modal">
+                <div class="fw-messages-wrap ls with_padding">
+                </div>
+             </div>
+             <!-- eof .modal -->
+             <!-- wrappers for visual page editor and boxed version of template -->
+             <div id="canvas">
+                <div id="box_wrapper">
+                   <!-- template sections -->
+                   <!-- Header sections: Start -->
+                   <app-header></app-header>
+
+
+
+
+
+<section class="ls section_padding_bottom_50">
+          <div class="container">
+             <div class="row">
+                <h1 class="text-center color-black">Loans Offered</h1>
+                <div class="col-sm-4">
+                   <div class="teaser text-center">
+                      <div class="teaser_icon main_bg_color size_normal round margin-auto background-white color-pink ">
+                         <i class="fas fa-car"></i>
+                      </div>
+                      <h3 class="text-uppercase margin-bottom-0 margin-top-0">
+                         Vehicle 
+                      </h3>
+                      <p class="font-size-16">Car Loans up to 100% of on-road price of the car, with lowest interest rates and tenure up to 7 years. </p>
+
+                   </div>
+                </div>
+                <div class="col-sm-4">
+                   <div class="teaser text-center">
+                      <div class="teaser_icon main_bg_color size_normal round margin-auto background-white color-pink">
+                         <i class="fas fa-house-damage"></i>
+                      </div>
+                      <h3 class="text-uppercase margin-bottom-0 margin-top-0">
+                         Rent Payment
+                      </h3>
+                      <p class="font-size-16">Pay the Rental deposit to your landlord through easy EMIs on credit card or get a personal loan</p>
+
+                   </div>
+                </div>
+                <div class="col-sm-4">
+                   <div class="teaser text-center margin-bottom-0 margin-top-0">
+                      <div class="teaser_icon main_bg_color size_normal round margin-auto background-white color-pink">
+                         <i class="fas fa-user-graduate"></i>
+                      </div>
+                      <h3 class="text-uppercase margin-bottom-0 margin-top-0">
+                         Student Fee
+                      </h3>
+                      <p class="font-size-16">Kombo Cash offers education loan for pursuing higher education in India or abroad for various courses in leading institutions.</p>
+
+                   </div>
+                </div>
+
+
+                <div class="col-sm-4">
+                   <div class="teaser text-center">
+                      <div class="teaser_icon main_bg_color size_normal round margin-auto background-white color-pink">
+                         <i class="fas fa-notes-medical"></i>
+                      </div>
+                      <h3 class="text-uppercase margin-bottom-0 margin-top-0">
+                         Medical Fee
+                      </h3>
+                      <p class="font-size-16">Personal Loan for Medical Treatment is a saviour when there is a medical emergency.</p>
+
+                   </div>
+                </div>
+                <div class="col-sm-4">
+                   <div class="teaser text-center">
+                      <div class="teaser_icon main_bg_color size_normal round margin-auto background-white color-pink">
+                         <i class="fas fa-landmark"></i>
+                      </div>
+                      <h3 class="text-uppercase margin-bottom-0 margin-top-0">
+                         Land Purchase
+                      </h3>
+                      <p class="font-size-16">Kombo Cash's Plot Loans help you acquire the land for your home so that you can start turning your dream home into reality</p>
+
+                   </div>
+                </div>
+                <div class="col-sm-4">
+                   <div class="teaser text-center">
+                      <div class="teaser_icon main_bg_color size_normal round margin-auto background-white color-pink">
+                         <i class="fas fa-business-time"></i>
+                      </div>
+                      <h3 class="text-uppercase margin-bottom-0 margin-top-0">
+                         Business Function
+                      </h3>
+                      <p class="font-size-16">Get the best Business loan online in India at attractive interest rate & get instant approval with low EMIs at Kombo Cash</p>
+
+                   </div>
+                </div>
+
+             </div>
+
+             </div>
+       </section>
+
+       <app-footer></app-footer>
+                </div>
+                <!-- eof #box_wrapper -->
+             </div>
+             <!-- eof #canvas -->
+             
+            </div>
