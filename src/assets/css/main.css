@@ -18634,7 +18634,7 @@ label {
 			background-image: url("../images/slide03.jpg");
 }
 .sign_in{
-	display: none;
+	/* display: none; */
 	position: fixed;
 	top:0px;
 	right:0px;

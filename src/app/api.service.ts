@@ -24,4 +24,16 @@ export class ApiService {
     return this.http.post(`${this.baseUrl}/${'userLogin'}`, obj);
   }
 
+  postAddContact(obj){
+    return this.http.post(`${this.baseUrl}/${'addContact'}`, obj);
+  }
+
+  postUserReaplayLoanQuery(obj){
+    return this.http.post(`${this.baseUrl}/${'userReaplayLoanQuery'}`, obj);
+  }
+
+  getqueryViewPerUserEmail(){
+    return this.http.get(`${this.baseUrl}/${'queryViewPerUserEmail'}`);
+  }
+
 }

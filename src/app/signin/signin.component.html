@@ -1,4 +1,45 @@
 
-<div class="container">
-    <div>signin</div>
-</div>
+<div class="col-sm-12 sign_in text-center margin-top-0" id="sign_in">
+              
+
+               <div class="col-sm-4 form-group padding-bottom-20 sign-in-form font-20 background-white" id="sign-in-form">
+                  <div class="col-sm-12 cross text-right cursor-pointer margin-top-0 padding-right-38" id="cut">
+                  <i class="fas fa-times text-right"></i>
+                  </div>
+
+                  <img class="width-60" src="assets/images/horizontal2.png" alt="">
+                 <h3 class="margin-top-0">Welcome !</h3>
+                 <!-- action="dashboard.html" -->
+                 <form  [formGroup]="signInForm" (submit)="signInSubmit($event)">
+                  <input class="form-control sign-in-field border-color-black" type="email" formControlName="email" name="username" placeholder="E-mail/Username" required />  <br>
+                  <input class="form-control sign-in-field border-color-black" type="password"  formControlName="password" name="password" placeholder="Password" id="pass" required />
+                  <span toggle="#pass" class="fa fa-fw fa-eye field-icon toggle-password color-black font-size-18 margin-right-5"></span>
+                  <div class="col-sm-12 text-right padding-top-6 padding-right-0 padding-top-0 font-14" id="forgot-password-button"><a class="forgot" href="#">Forgot Password ?</a></div>
+                  <!-- href="dashboard.html" -->
+                   <a ><button class="theme_button color1 wide_button padding10-30" id="signin_button">Sign in</button></a>
+                </form>
+               </div>
+               <div class="col-sm-4 form-group forgot-password padding-bottom-20 sign-in-form padding-top-0 font-20 background-white" id="forgot-password-email">
+                  <div class="col-sm-12 cross text-right cursor-pointer margin-top-0 padding-right-38" id="cut">
+                  <i class="fas fa-times text-right"></i>
+                  </div>
+                 <h3 class="">Forgot Password</h3>
+                 <h6>Please enter your registered Email ID</h6>
+                 
+                  <input class="form-control sign-in-field border-color-black" type="email" name="username" placeholder="E-mail" required />  <br>
+                   <a><button class="theme_button color1 wide_button padding10-30" id="forgot-password-email-button">Submit</button></a>
+                
+               </div>
+               <div class="col-sm-4 form-group forgot-password padding-bottom-20 sign-in-form padding-top-0 font-20 background-white" id="forgot-password">
+                  <div class="col-sm-12 cross text-right cursor-pointer margin-top-0 padding-right-38" id="cut">
+                  <i class="fas fa-times text-right"></i>
+                  </div>
+                 <h3 class="">Forgot Password</h3>
+                 <h6>Please enter the OTP sent to your Email Id</h6>
+                 
+                  <input class="form-control sign-in-field" type="number" name="otp" placeholder="OTP" required /> 
+                  <div class="col-sm-12 text-right padding-top-6 padding-right-0 padding-top-0 font-14" id="forgot-password-button"><a class="forgot" href="#">Resend OTP</a></div>
+                   <a href="change-password.html"><button class="theme_button color1 wide_button padding10-30" id="signin_button">Submit</button></a>
+              
+               </div>
+            </div>      

@@ -4,7 +4,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { LoandetailComponent } from './loandetail/loandetail.component';
 import { NotificationComponent } from './notification/notification.component';
 import { ProfileComponent } from './profile/profile.component';
-import { QueryFormComponent } from './query-form/query-form.component';
+
 import { SettingsComponent } from './settings/settings.component';
 import { UserborrowingComponent } from './userborrowing/userborrowing.component';
 import { UsercontactusComponent } from './usercontactus/usercontactus.component';
@@ -19,7 +19,7 @@ const routes: Routes = [
   {path:'notification', component: NotificationComponent},
   {path:'profile', component: ProfileComponent},
   {path:'settings', component: SettingsComponent},
-  {path:'query-form', component: QueryFormComponent}
+  
 ];
 
 @NgModule({

@@ -12,7 +12,7 @@ import { FootersigninComponent } from './footersignin/footersignin.component';
 import { UserborrowingComponent } from './userborrowing/userborrowing.component';
 import { UserfaqComponent } from './userfaq/userfaq.component';
 import { UsercontactusComponent } from './usercontactus/usercontactus.component';
-import { QueryFormComponent } from './query-form/query-form.component';
+
 
 
 @NgModule({
@@ -26,7 +26,7 @@ import { QueryFormComponent } from './query-form/query-form.component';
     UserborrowingComponent,
     UserfaqComponent,
     UsercontactusComponent,
-    QueryFormComponent],
+    ],
   imports: [
     CommonModule,
     UserRoutingModule
