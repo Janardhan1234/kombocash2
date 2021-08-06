@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from 'src/app/api.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,9 +8,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor() { }
+   showSpinner = true;
+   collections: Object;
+   clickIcon = true;
+   displayIconAmount = false;
 
-  ngOnInit(): void {    
+   displayName;
+
+
+  constructor(
+     private apiService: ApiService
+  ) { }
+
+  ngOnInit(): void { 
+     
+   this.loadSpinner();
+
+   this.apiService.getCollection().subscribe(x =>{
+      console.log(x);
+
+    this.collections = x;
+    console.log(this.collections);
+    });
+
+
+
     $('#sign-in-button').click(function(){
                   
       $('#sign_in').fadeIn({queue: false, duration: 'slow'});
@@ -121,6 +144,26 @@ export class DashboardComponent implements OnInit {
   }
 
   
+
+  loadSpinner(){
+     this.showSpinner = false;
+
+     setTimeout(()=>{
+        this.showSpinner = false;
+     }, 5000)
+  }
+
+  loanAmount(categoryName){
+   console.log(categoryName);
+   this.clickIcon = false;
+   this.displayIconAmount = true;
+   this.displayName = categoryName; 
+  }
+
+  closeButton(){
+   this.clickIcon = true;
+   this.displayIconAmount = false;
+  }
 
 
                              //   $(document).ready(function() {

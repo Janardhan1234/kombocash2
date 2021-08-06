@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ApiService {
 
-  baseUrl = 'https://kombo-cash-api.herokuapp.com/';
+  baseUrl = 'https://kombo-cash-api.herokuapp.com';
 
   constructor(private http:HttpClient) { }
 

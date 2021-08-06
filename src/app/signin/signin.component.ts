@@ -17,8 +17,8 @@ export class SigninComponent implements OnInit {
     private router:Router,
     private formBuilder: FormBuilder,
     private apiService:ApiService,
-    private snackbar: MatSnackBar
-    // public dialogRef: MatDialogRef<any>,
+    private snackbar: MatSnackBar,
+    public dialogRef: MatDialogRef<any>,
     // @Inject(MAT_DIALOG_DATA) public data: any
   ) { }
 
@@ -50,13 +50,14 @@ export class SigninComponent implements OnInit {
         this.snackbar.open("successfully signed in",'',{
           duration:5000
         })
+        this.close();
         this.signInForm.reset();
         this.router.navigate(['/user']);
       }else{
         // console.log(error);
       this.snackbar.open("wrong username/password",'',{
         duration:5000
-      })
+      })      
       // this.router.navigate(['/user']);  
       }
       
@@ -70,6 +71,10 @@ export class SigninComponent implements OnInit {
     }
     ) 
   
+  }
+
+  close(){
+    this.dialogRef.close(true);
   }
 
   // onNoClick(): void {

@@ -12,6 +12,7 @@ import { FootersigninComponent } from './footersignin/footersignin.component';
 import { UserborrowingComponent } from './userborrowing/userborrowing.component';
 import { UserfaqComponent } from './userfaq/userfaq.component';
 import { UsercontactusComponent } from './usercontactus/usercontactus.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -29,7 +30,9 @@ import { UsercontactusComponent } from './usercontactus/usercontactus.component'
     ],
   imports: [
     CommonModule,
-    UserRoutingModule
+    UserRoutingModule,
+    ReactiveFormsModule,
+    CommonModule
   ]
 })
 export class UserModule { }

@@ -1,7 +1,7 @@
   <!--[if lt IE 9]>
                <div class="bg-danger text-center">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/" class="highlight">upgrade your browser</a> to improve your experience.</div>
                <![endif]-->
-               <div class="preloader">
+               <div class="preloader" *ngIf="showSpinner">
                 <div class="preloader_image"></div>
              </div>
           
@@ -34,14 +34,17 @@
                       <div class="col-sm-12">
                          <h6 class="margin-top-0">Please Select Your Category>></h6>
                       </div> -->
-                      <div class="col-sm-12 padding-right-40">
-                      <div class="col-sm-2 border-right cursor-pointer" id="vehicle">
-                         <a  class="amount-icon fas fa-car"></a>
-                         <h6 class="">
-                         Vehicle
-                      </h6>
-                      </div>
-                      <div class="col-sm-2 border-right cursor-pointer" id="rent">
+                      <div class="col-sm-12 padding-right-40" >
+                         <div *ngIf="clickIcon">
+                           <div class="col-sm-2 border-right cursor-pointer" id="vehicle" *ngFor="let collection of collections" (click)="loanAmount(collection.category_name)" >
+                              <a  class="amount-icon fas fa-car"></a>
+                              <h6 class=""  style="font-size: 16px; font-weight: 700; line-height: 1.3; word-break: break-word; margin-top: 1.1em; margin-bottom: 0.8em; position: relative;">
+                              {{collection.category_name}}
+                           </h6>
+                           </div>
+                         </div>
+                      
+                      <!-- <div class="col-sm-2 border-right cursor-pointer" id="rent">
                          <a  class="amount-icon fas fa-house-damage" ></a>     
                          <h6 class="">
                          Rent
@@ -70,15 +73,24 @@
                          <h6 class="">
                          Business
                       </h6>
-                      </div>
-                      <div class="col-sm-10 amount " id="amount">
-                         <h5 class="col-sm-3 padding-top-45">Please Enter the Amount</h5>
-                         <form class="col-sm-8">
-                            <input type="number" class="amount-field pull-left margin-left-50" name="amount" placeholder="Amount">
-                            <input type="submit" name="amount-submit" class="amount-submit padding10-30 margin-top-20 border-color-blue color-blue background-white border-radius-30">
-                         </form>
-                         <a class="col-sm-1 rt-icon2-cross2 padding-top-17" id="cross"></a> 
-                      </div>        
+                      </div> -->
+                     <div *ngIf="displayIconAmount">
+                        <div class="col-sm-2 border-right cursor-pointer" id="vehicle">
+                           <a  class="amount-icon fas fa-car"></a>
+                           <h6 class=""  style="font-size: 16px; font-weight: 700; line-height: 1.3; word-break: break-word; margin-top: 1.1em; margin-bottom: 0.8em; position: relative;">
+                           {{displayName}}
+                        </h6>
+                        </div>
+                        <div class="col-sm-10" id="amount">
+                           <h5 class="col-sm-3 padding-top-45">Please Enter the Amount</h5>
+                           <form class="col-sm-8">
+                              <input type="number" class="amount-field pull-left margin-left-50" name="amount" placeholder="Amount">
+                              <input type="submit" name="amount-submit" class="amount-submit padding10-30 margin-top-20 border-color-blue color-blue background-white border-radius-30">
+                           </form>
+                           <a class="col-sm-1 rt-icon2-cross2 padding-top-17" id="cross" (click)="closeButton()"></a> 
+                        </div>        
+                      </div> 
+                      
                    
                    </div>
                    </div>
